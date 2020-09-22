@@ -16,5 +16,12 @@ def salary(h, m, b):
     return h * m + b
 
 
-_,h, m, b = sys.argv
-print(salary(int(h), int(m), int(b)))
+_, h, m, b = sys.argv
+
+
+try:
+    result = salary(float(h), float(m), float(b))
+    print(result)
+except ValueError:
+    print('Ошибка ввода данных')
+
