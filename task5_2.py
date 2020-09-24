@@ -1,6 +1,6 @@
 """2. Создать текстовый файл (не программно), сохранить в нем несколько строк,
 выполнить подсчет количества строк, количества слов в каждой строке."""
-with open("test.txt", "r") as f_obj:
+with open("test.txt", "r", encoding='UTF-8') as f_obj:
     content = f_obj.readlines()
     stroka = len(content)
     print(f"Количество строк: {stroka}")
