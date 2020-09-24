@@ -4,10 +4,10 @@
 import statistics
 import re
 
-with open("oklad.txt") as oklad:
+with open("oklad.txt", encoding='UTF-8') as oklad:
     print("Фамиилии тех, кто получает меньше 20000: ", end="")
     print(*[re.split(' |\n', line.rstrip())[0] for line in oklad if int(re.split(' |\n', line.rstrip())[1]) < 20000])
-with open("oklad.txt") as oklad:
+with open("oklad.txt", encoding='UTF-8') as oklad:
     lis_avg = [int(re.split(' |\n', line.rstrip())[1]) for line in oklad]
     avg = statistics.mean(lis_avg)
 print(f"Средний оклад сотрудников: {avg}")
