@@ -11,7 +11,7 @@ import re
 
 translation = {"One": "Один", "Two": "Два", "Three": "Три", "Four": "Четыре"}
 
-with open("for 5_4.txt", encoding='UTF-8') as count:
+with open("for 5_4.txt","r", encoding='UTF-8') as count:
     for line in count:
         line = re.split(' |\n',line.rstrip())
         rus = translation[line[0]]
